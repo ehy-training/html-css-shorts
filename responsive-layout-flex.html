@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--Version: 1.4-->
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Layout mit Flex</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        section.box {
+            border: 1px solid black;
+            padding: 1em;
+        }
+
+        .main-column {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+        .box-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            background: red;
+        }
+
+        .box-wrapper {
+            width: 100%;
+        }
+
+        .box {
+            width: 100%;
+        }
+
+
+
+
+        @media only screen and (min-width: 580px) {
+
+
+
+
+            .box {
+                width: 33.33%;
+            }
+        }
+
+        @media only screen and (min-width: 960px) {
+
+            .box-wrapper {
+                width: 50%;
+            }
+
+
+        }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="wrapper main-column">
+        <div class="wrapper box-wrapper">
+            <section class="box">
+                Box 1
+            </section>
+
+            <section class="box">
+                Box 2
+            </section>
+
+            <section class="box">
+                Box 3
+            </section>
+        </div>
+
+        <div class="wrapper box-wrapper">
+            <section class="box">
+                Box 4
+            </section>
+
+            <section class="box">
+                Box 5
+            </section>
+
+            <section class="box">
+                Box 6
+            </section>
+        </div>
+    </div>
+    <!--.main-column-->
+</body></html>
