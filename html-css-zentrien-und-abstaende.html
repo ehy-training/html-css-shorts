@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zentrieren und Abstände</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        header {
+            background: red;
+            min-height: 100px;
+        }
+
+
+        main {
+            background: lightgrey;
+            min-height: 100vh;
+        }
+        
+        section.text {
+            min-height: 70vh;
+        }
+
+
+        footer {
+            background: green;
+            min-height: 100px;
+        }
+        
+        
+        .content-1 nav {
+            /*
+            Text und Inlineelemente können innerhalb ihres Elternelements einfach per text-align: center mittig positioniert werden.
+            */
+            text-align: center;
+
+        }
+        
+        .content-2 nav {
+            /*
+            Blockelmente können nicht mit text-align: center positioniert werden. Hier gibt es andere Strategien. Die einfachste: das Element muss weniger als 100% breit sein und kann dann mit margin: 0 auto mittig gesetzt werden. Andere Strategien finden sich mittels Flex oder Grid, sind aber recht fortgeschritten.
+            */
+            width: 20em;
+            text-align: center;
+            margin: 0 auto;
+
+        }
+        
+        nav a {
+            /*
+            Aus Links (a Element) Buttons machen. Vom US her nicht immer die BEste Idee!
+            */
+            display: inline-block;
+            min-width: 5em;
+            background: green;
+            padding: 0.5em;
+            border-radius: 0.3em;
+        }
+        
+        
+    </style>
+
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Zentrieren und Abstände</h1>
+    </header>
+
+    <main>
+        <!--kleiner Ausflug in eine korrekte sematische Struktur mit ARTICLE und SECTION -->
+        <article>
+            <section id="content-1" class="content-1">
+                <h2>Inhalt, Version 1</h2>
+                <nav>
+                    <a href="#introduction">Einleitung</a>
+                    <a href="#main-topic">Thema</a>
+                    <a href="#conclusion">Fazit</a>
+                </nav>
+            </section>
+                        <section id="content-2" class="content-2">
+                <h2>Inhalt, Version 2</h2>
+                <nav>
+                    <a href="#introduction">Einleitung</a>
+                    <a href="#main-topic">Thema</a>
+                    <a href="#conclusion">Fazit</a>
+                </nav>
+            </section>
+
+            <section id="introduction" class="introduction text">
+                <h2>Einleitung</h2>
+
+            </section>
+
+            <section id="main-topic" class="main-topic text">
+                <h2>Thema</h2>
+
+            </section>
+
+            <section id="conclusion" class="conclusion text">
+                <h2>Fazit</h2>
+
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2024 Enno Hyttrek</p>
+    </footer>
+
+</body></html>
